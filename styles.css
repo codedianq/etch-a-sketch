@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* sketchpad style */
+#container {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 600px;
+}
+
+.rows {
+    flex: 1;
+    display: flex;
+}
+
+.cols {
+    border: 1px solid gray;
+    flex: 1;
+}
+
+
+
