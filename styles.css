@@ -12,13 +12,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     
 }
 
 /* title style */
 #title h1 {
+    margin-top: 100px;
     color: #451952;
     font-size: 60px;
 }
@@ -59,6 +60,24 @@ body {
 
 #controls .size-btn:hover {
     background-color: #2a0735;
+}
+
+/* footer style */
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: white;
+}
+
+#footer .info {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#footer img {
+    width: 20px;
+    margin-left: -40px;
 }
 
 
