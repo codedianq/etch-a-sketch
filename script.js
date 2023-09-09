@@ -25,10 +25,14 @@ function createCol(numCol) {
             let colDiv = document.createElement('div');
             colDiv.classList.add('cols');
             gridRow[j].appendChild(colDiv);
+            colDiv.addEventListener('mouseover', function() {
+                colDiv.style.backgroundColor = 'black'
+            })
         }
         
     }
 }
+
 
 defaultGrid()
 
