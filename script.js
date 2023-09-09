@@ -1,11 +1,15 @@
+//variables
+// let gridNum = prompt('Input number for rows and columns:');
+
 //reference for the sketchpad
 const container = document.querySelector('#container');
 let gridRow = document.getElementsByClassName('rows');
 let gridCol = document.getElementsByClassName('cols');
+
 //create a function that will generate the sketchpad grid
 function defaultGrid() {
-    createRow(30);
-    createCol(30);
+    createRow(16);
+    createCol(16);
 }
 function createRow(numRow) {
     for(let i = 0; i < numRow; i++) {
