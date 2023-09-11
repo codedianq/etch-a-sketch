@@ -53,8 +53,9 @@ body {
     gap: 20px;
 }
 
-#controls .size-btn,
-.control {
+#controls .control {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
     font-size: 20px;
     padding: 10px;
     border: none;
@@ -65,8 +66,7 @@ body {
     cursor: pointer;
 }
 
-#controls .size-btn:hover,
-.control:hover {
+#controls .control:hover {
     background-color: #a19d9d;
 }
 

@@ -11,9 +11,9 @@ const controls = document.querySelector('#controls');
 const pickSize = document.querySelector('.size-btn');
 const rainbow = document.querySelector('.rainbow-btn');
 const reset = document.querySelector('.reset-btn');
-console.log(reset);
+const eraser = document.querySelector('.erase-btn')
 
-//create a function that will generate the sketchpad grid
+//create a function for Pick Size button that will generate the sketchpad grid
 function gridNum() {
     for(let i = 0; i < gridRow.length; i++) {
         for(let j = 0; j < gridCol.length; j++) {
@@ -35,7 +35,7 @@ function gridNum() {
     
 }
 
-//create a function for rainbow color
+//create a function for rainbow button
 function rainbowColor() {
     for(let i = 0; i < gridRow.length; i++) {
         for(let j = 0; j < gridCol.length; j++) {
@@ -49,7 +49,19 @@ function rainbowColor() {
     }
 }
 
-//create a function that resets the sketchpad
+//create a function for eraser button
+function eraserButton() {
+    for(let i = 0; i < gridRow.length; i++) {
+        for(let j = 0; j < gridCol.length; j++) {
+            gridCol[j].addEventListener('mouseover', () =>{
+                gridCol[j].style.backgroundColor = '#000000';
+            })
+        }
+    }
+}
+
+
+//create a function for reset button that resets the sketchpad
 function clearReset() {
     for(let i = 0; i < gridRow.length; i++) {
         for(let j = 0; j < gridCol.length; j++) {
@@ -62,6 +74,9 @@ function clearReset() {
 pickSize.addEventListener('click', gridNum);
 //button for making the color rainbow
 rainbow.addEventListener('click', rainbowColor)
+//button for eraser that will erase the color painted in sketchpad
+eraser.addEventListener('click', eraserButton)
+//button for reset that will clear the sketchpad
 reset.addEventListener('click', clearReset);
 
 function defaultGrid() {
