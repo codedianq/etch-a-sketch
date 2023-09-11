@@ -54,7 +54,7 @@ function createCol(numCol) {
             colDiv.classList.add('cols');
             gridRow[j].appendChild(colDiv);
             colDiv.addEventListener('mouseover', function() {
-                colDiv.style.backgroundColor = 'black'
+                colDiv.style.backgroundColor = 'white'
             })
         }
         
