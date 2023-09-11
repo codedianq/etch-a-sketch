@@ -65,7 +65,10 @@ function eraserButton() {
 function clearReset() {
     for(let i = 0; i < gridRow.length; i++) {
         for(let j = 0; j < gridCol.length; j++) {
-            gridCol[j].style.backgroundColor = '#000000'
+            gridCol[j].style.backgroundColor = '#000000';
+            gridCol[j].addEventListener('mouseover', () =>{
+                gridCol[j].style.backgroundColor = 'white';
+            })
         }
     }
 }
