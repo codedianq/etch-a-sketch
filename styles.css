@@ -27,7 +27,6 @@ body {
 /* sketchpad style */
 #container {
     border-radius: 3px;
-    border: 1px solid #662549;
     display: flex;
     flex-direction: column;
     height: 500px;
