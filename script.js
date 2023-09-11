@@ -9,6 +9,7 @@ let gridCol = document.getElementsByClassName('cols');
 //reference for the controls
 const controls = document.querySelector('#controls');
 const pickSize = document.querySelector('.size-btn');
+const rainbow = document.querySelector('.rainbow-btn');
 
 //create a function that will generate the sketchpad grid
 function gridNum() {
@@ -32,8 +33,24 @@ function gridNum() {
     
 }
 
+//create a function for rainbow color
+function rainbowColor() {
+    for(let i = 0; i < gridRow.length; i++) {
+        for(let j = 0; j < gridCol.length; j++) {
+            let randomR = Math.floor(Math.random() * 256) + 1;
+            let randomB = Math.floor(Math.random() * 256) + 1;
+            let randomG = Math.floor(Math.random() * 256) + 1;
+            gridCol[j].addEventListener('mouseover', () => {
+                gridCol[j].style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+            })
+        }
+    }
+}
+
 //button for generating grids
-pickSize.addEventListener('click', (gridNum))
+pickSize.addEventListener('click', gridNum);
+//button for making the color rainbow
+rainbow.addEventListener('click', rainbowColor)
 
 function defaultGrid() {
     createRow(16);
@@ -60,6 +77,7 @@ function createCol(numCol) {
         
     }
 }
+
 
 defaultGrid()
 
